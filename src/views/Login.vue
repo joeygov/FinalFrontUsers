@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <v-card class="mx-auto my-12" max-width="374" @submit="onsubmit">
+    <v-card class="mx-auto my-12" max-width="374" @submit="onsubmit()">
       <v-subheader height="200">
         <h1>Login</h1>
       </v-subheader>
@@ -26,7 +26,7 @@
       </v-card-text>
       <center>
         <v-card-actions>
-          <v-btn id="customer" @click="onsubmit">LOGIN</v-btn>
+          <v-btn id="customer" @click="onsubmit()">LOGIN</v-btn>
           <!-- <v-btn id="company" >Company</v-btn> -->
         </v-card-actions>
       </center>
@@ -67,8 +67,8 @@ export default {
     }
   },
   methods: {
-    onsubmit(e) {
-      e.preventDefault();
+    onsubmit() {
+     // e.preventDefault();
       // let user = AUTH.login(this.input.username, this.input.password);
       // if (this.input.username === "" || this.input.password === "") {
         var data = {
