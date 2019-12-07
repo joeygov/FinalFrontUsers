@@ -69,7 +69,7 @@ export default {
   },
   methods: {
     submit() {
-      console.log(this.address);
+      //console.log(this.address);
       axios.post("http://localhost:5000/accountsUsers",this.data).then(response => {
         alert(response);
         this.data ="";
